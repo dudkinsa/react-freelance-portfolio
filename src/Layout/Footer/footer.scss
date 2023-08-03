@@ -1,0 +1,40 @@
+.footer {
+  /* Sticky footer  */
+  margin-top: auto;
+
+  padding: 60px 0 50px;
+  background-color: var(--dark-bg);
+  color: var(--header-text);
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+  }
+}
+
+.social {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 16px;
+}
+
+@media (max-width: 620px) {
+  .footer {
+    padding: 40px 0 30px;
+    &__wrapper {
+      row-gap: 20px;
+    }
+  }
+
+  .social {
+    &__item {
+      width: 28px;
+    }
+  }
+}
