@@ -1,0 +1,20 @@
+/* Dark mode btn */
+.dark-mod-btn {
+    order: 9;
+  
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  
+    width: 51px;
+    height: 26px;
+    padding: 5px;
+  
+    background-color: #272727;
+    border-radius: 50px;
+  
+    &__icon {
+      position: relative;
+      z-index: 9;
+    }
+  }
