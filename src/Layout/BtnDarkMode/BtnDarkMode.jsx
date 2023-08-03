@@ -4,8 +4,13 @@ import darkMode from '../../assets/icons/moon.svg';
 import './style.scss'
 
 const BtnDarkMode = () => {
+
+  const toggleDarkMode = () => {
+    console.log('+');
+  }
+
   return (
-    <button className="dark-mod-btn dark-mod-btn--active">
+    <button className="dark-mod-btn" onClick={toggleDarkMode}>
               <img
                 className="dark-mod-btn__icon"
                 src={lightMode}
