@@ -1,8 +1,8 @@
 .nav {
   //  background-color:#171718;
-  background-color: var(--dark-bg);
+  background-color: var(--nav-bg);
   //  border-bottom: 1px solid #26292D;
-  border-bottom: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--nav-border);
   //  color: #fff;
   color: var(--white);
   padding: 20px 0;
@@ -20,7 +20,7 @@
 
 .logo {
   margin-right: auto;
-  color: var(--header-text);
+  color: var(--nav-text);
   font-style: 24px;
   font-family: 'Poppins', sans-serif;
 }
@@ -40,7 +40,7 @@
   font-family: 'Poppins', sans-serif;
 
   &__link {
-    color: var(--header-text);
+    color: var(--nav-text);
     transition: opacity 0.2s ease-in;
   }
   &__link:active {
