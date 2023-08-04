@@ -1,11 +1,8 @@
 .nav {
-  //  background-color:#171718;
-  background-color: var(--nav-bg);
-  //  border-bottom: 1px solid #26292D;
-  border-bottom: 1px solid var(--nav-border);
-  //  color: #fff;
-  color: var(--white);
   padding: 20px 0;
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  color: var(--nav-text);
   letter-spacing: normal;
 
   &__row {

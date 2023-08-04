@@ -14,20 +14,6 @@ font-family: 'DM Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
  */
 
-html,
-body {
-  font-family: 'DM Sans', sans-serif;
-  letter-spacing: -0, 5px;
-  height: 100%;
-
-  /* Light mode */
-	background-color: var(--page-bg);
-	color: var(--text-color);
-
-}
-
-
-
 :root {
   /* Colors */
   --blackpure: #000;
@@ -36,59 +22,63 @@ body {
   --white: #fff;
   --purple: #5c62ec;
 
-/* Nav */
---nav-bg: var(--black);
---nav-border: var(--black-border);
---nav-text: var(--white);
+  /* Nav */
+  --nav-bg: var(--black);
+  --nav-border: var(--black-border);
+  --nav-text: var(--white);
 
-/* Header */
---header-bg: var(--black);
---header-text: var(--white);
+  /* Header */
+  --header-bg: var(--black);
+  --header-text: var(--white);
 
-  
+  /* Footer */
+  --footer-bg: var(--black);
+  --footer-text: var(--white);
 
-  // --text-color: var(--black);
+  /* Light mode */
+  --page-bg: var(--white);
+  --text-color: var(--black);
+  --accent: var(--purple);
+  --title-1: var(--accent);
 
-  // --dark-bg: var(--black);
-  // --dark-border: var(--black-border);
-  // --header-text: var(--white);
-  // --accent: var(--purple);
-  // --text-color: var(--black);
-  // --title-1: var(--accent);
-
-  
-	// /* Light mode */
-	// --page-bg: var(--white);
-	// --text-color: var(--black);
-	// --accent: var(--purple);
-	// --title-1: var(--accent);
-
-	// --project-card-bg: var(--white);
-	// --project-card-text: var(--black);
-	// --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+  --project-card-bg: var(--white);
+  --project-card-text: var(--black);
+  --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
 }
 .dark {
-	/* Dark mode */
-	--page-bg: #252526;
-	--text-color: var(--white);
+  /* Dark mode */
+  --page-bg: #252526;
+  --text-color: var(--white);
 
-	--title-1: var(--white);
+  --title-1: var(--white);
 
-	--project-card-bg: var(--black);
-	--project-card-text: var(--white);
-	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+  --project-card-bg: var(--black);
+  --project-card-text: var(--white);
+  --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
 }
 
-#root{
+html,
+body {
+  min-height: 100vh;
+
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: -0, 5px;
+
+  /* Light mode */
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
+#root {
   min-height: 100vh;
 }
-.App{
-    /* Sticky footer
+.App {
+  /* Sticky footer
   идем в footer.scss
   */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 .container {
