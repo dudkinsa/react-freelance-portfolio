@@ -6,6 +6,7 @@
 @import 'Pages/Home/home.scss';
 @import 'Pages/Contacts/contacts.scss';
 @import 'Pages/Project/project.scss';
+
 @import 'reset.css';
 
 /* 
@@ -19,9 +20,16 @@ body {
   letter-spacing: -0, 5px;
   height: 100%;
 
+  /* Light mode */
+	background-color: var(--page-bg);
+	color: var(--text-color);
+
 }
 
+
+
 :root {
+  /* Colors */
   --blackpure: #000;
   --black: #171718;
   --black-border: #26292d;
@@ -36,6 +44,17 @@ body {
   --accent: var(--purple);
   --text-color: var(--black);
   --title-1: var(--accent);
+
+  
+	/* Light mode */
+	--page-bg: var(--white);
+	--text-color: var(--black);
+	--accent: var(--purple);
+	--title-1: var(--accent);
+
+	--project-card-bg: var(--white);
+	--project-card-text: var(--black);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
 }
 
 #root{
