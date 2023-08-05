@@ -1,19 +1,24 @@
 import React from 'react';
+import {useLocalStorage} from '../../utils/useLocalStore';
+
 import sun from '../../assets/icons/sun.svg';
 import moon from '../../assets/icons/moon.svg';
+
 import './style.scss';
 
 const BtnDarkMode = () => {
-  const [darkMode, setDarkMode] = React.useState('light');
+  const [darkMode, setDarkMode] = useLocalStorage('darkMode', 'light');
+
+  const btnRef = React.useRef(null);
 
   React.useEffect(() => {
-    console.log('useEffect Fired');
-    console.log({ darkMode });
-
     if (darkMode === 'dark') {
       document.body.classList.add('dark');
+
+      btnRef.current.classList.add('dark-mode-btn--active');
     } else {
       document.body.classList.remove('dark');
+      btnRef.current.classList.remove('dark-mode-btn--active');
     }
   }, [darkMode]);
 
@@ -27,8 +32,11 @@ const BtnDarkMode = () => {
 
   return (
     <>
-      {darkMode}
-      <button className={darkMode === 'dark' ? btnActive : btnNormal} onClick={toggleDarkMode}>
+      <button
+        ref={btnRef}
+        className={darkMode === 'dark' ? btnActive : btnNormal}
+        onClick={toggleDarkMode}
+      >
         <img className="dark-mode-btn__icon" src={sun} alt="Light mode" />
         <img className="dark-mode-btn__icon" src={moon} alt="Dark mode" />
       </button>
