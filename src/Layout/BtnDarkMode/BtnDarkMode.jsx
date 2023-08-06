@@ -10,16 +10,16 @@ import './style.scss';
 const BtnDarkMode = () => {
   const [darkMode, setDarkMode] = useLocalStorage('darkMode', detectDarkMode());
 
-  const btnRef = React.useRef(null);
+
 
   React.useEffect(() => {
     if (darkMode === 'dark') {
       document.body.classList.add('dark');
 
-      btnRef.current.classList.add('dark-mode-btn--active');
+   
     } else {
       document.body.classList.remove('dark');
-      btnRef.current.classList.remove('dark-mode-btn--active');
+     
     }
   }, [darkMode]);
 
@@ -37,9 +37,9 @@ const BtnDarkMode = () => {
       .matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', (event) => {
         const newColorScheme = event.matches ? 'dark' : 'light';
-        setDarkMode(newColorScheme)
+        setDarkMode(newColorScheme);
       });
-  }, []);
+  }, [setDarkMode]);
 
   const toggleDarkMode = () => {
     setDarkMode((currentValue) => {
@@ -52,7 +52,7 @@ const BtnDarkMode = () => {
   return (
     <>
       <button
-        ref={btnRef}
+      
         className={darkMode === 'dark' ? btnActive : btnNormal}
         onClick={toggleDarkMode}
       >
