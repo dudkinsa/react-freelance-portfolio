@@ -1,5 +1,5 @@
 import React from 'react';
-import {useLocalStorage} from '../../utils/useLocalStore';
+import { useLocalStorage } from '../../utils/useLocalStore';
 import detectDarkMode from '../../utils/detectDarkMode';
 
 import sun from '../../assets/icons/sun.svg';
@@ -11,7 +11,6 @@ const BtnDarkMode = () => {
   const [darkMode, setDarkMode] = useLocalStorage('darkMode', detectDarkMode());
 
   const btnRef = React.useRef(null);
-  
 
   React.useEffect(() => {
     if (darkMode === 'dark') {
@@ -22,17 +21,26 @@ const BtnDarkMode = () => {
       document.body.classList.remove('dark');
       btnRef.current.classList.remove('dark-mode-btn--active');
     }
-    
   }, [darkMode]);
 
   React.useEffect(() => {
-		window
-			.matchMedia('(prefers-color-scheme: dark)')
-			.addEventListener('change', (event) => {
-				const newColorScheme = event.matches ? 'dark' : 'light';
-				setDarkMode(newColorScheme);
-			});
-	}, [setDarkMode]);
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', (event) => {
+        const newColorScheme = event.matches ? 'dark' : 'light';
+        setDarkMode(newColorScheme);
+      });
+  }, [setDarkMode]);
+
+  React.useEffect(() => {
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', (event) => {
+        const newColorScheme = event.matches ? 'dark' : 'light';
+        setDarkMode(newColorScheme)
+      });
+  }, []);
+
   const toggleDarkMode = () => {
     setDarkMode((currentValue) => {
       return currentValue === 'light' ? 'dark' : 'light';
@@ -55,7 +63,4 @@ const BtnDarkMode = () => {
   );
 };
 
-
 export default BtnDarkMode;
-
-
